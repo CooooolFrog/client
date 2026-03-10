@@ -623,7 +623,7 @@ pub async fn upgraded_handler(
         config.proxy.rules.as_deref(),
         url::Url::parse(&request_uri.to_string()).or_err(ErrorType::ParseError)?,
     ) {
-        debug!(
+        info!(
             "proxy HTTPS request via dfdaemon by rule config: {:?}",
             request,
         );
